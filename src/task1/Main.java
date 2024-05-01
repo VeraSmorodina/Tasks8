@@ -1,11 +1,11 @@
 package task1;
 
 public class Main {
-    public static int exponentiation(int con, int number, int degree) {
+    public static int exponentiation(int constant, int number, int degree) {
         if (degree > 1) {
-            number *= con;
+            number *= constant;
             degree--;
-            return exponentiation(con, number, degree);
+            return exponentiation(constant, number, degree);
         }
         return number;
     }
