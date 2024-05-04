@@ -1,9 +1,9 @@
 package task4;
 
 public class Main {
-    public static boolean isTrue(String s, boolean b) {
-        if (!b) return false;
-        if (s.length() <= 1) return true;
-        return isTrue(s.substring(1, s.length() - 1), s.substring(0, 1).equals(s.substring(s.length() - 1)));
+    public static boolean isTrue(String s, int index) {
+        if (index >= s.length() / 2) return true;
+        if (s.charAt(index) != s.charAt(s.length() - 1 - index)) return false;
+        return isTrue(s, index + 1);
     }
 }
