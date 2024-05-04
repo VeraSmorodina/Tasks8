@@ -2,7 +2,7 @@ package task4;
 
 public class Main {
     public static boolean isTrue(String s, int index) {
-        if (index >= s.length() / 2) return true;
+        if (index > s.length() / 2) return true;
         if (s.charAt(index) != s.charAt(s.length() - 1 - index)) return false;
         return isTrue(s, index + 1);
     }
