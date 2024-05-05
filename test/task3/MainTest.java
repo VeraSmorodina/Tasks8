@@ -13,7 +13,7 @@ public class MainTest {
         array.add(1);
         array.add(2);
         array.add(3);
-        int result = Main.getLengthList(array, 0);
+        int result = Main.getLengthList(array);
         assertEquals(3, result);
     }
 
@@ -27,7 +27,7 @@ public class MainTest {
         array.add(5);
         array.add(6);
         array.add(7);
-        int result = Main.getLengthList(array, 0);
+        int result = Main.getLengthList(array);
         assertEquals(7, result);
     }
 }
