@@ -13,6 +13,7 @@ public class Main {
         arrayList.add(4);
         getMax(arrayList);
 
+
 //        Integer max1 = null;
 //        Integer max2 = null;
 //        for (int i = 1; i < arrayList.size(); i++) {
