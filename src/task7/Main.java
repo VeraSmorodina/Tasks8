@@ -4,6 +4,11 @@ import java.util.List;
 import java.util.Objects;
 
 public class Main {
+    public static int getSecondMaxNumber(List<Integer> numbers) {
+        List<Integer> result = getSecondMaxNumberRec(numbers, 0, null, null);
+        return result.size() > 1 ? result.get(1) : result.get(0);
+    }
+
     private static List<Integer> getSecondMaxNumberRec(List<Integer> numbers, int index, Integer max1, Integer max2) {
         if (numbers.size() == 1)
             return List.of(numbers.get(0));
@@ -32,10 +37,5 @@ public class Main {
             max1 = numbers.get(index);
         }
         return getSecondMaxNumberRec(numbers, index + 1, max1, max2);
-    }
-
-    public static int getSecondMaxNumber(List<Integer> numbers) {
-        List<Integer> result = getSecondMaxNumberRec(numbers, 0, null, null);
-        return result.size() > 1 ? result.get(1) : result.get(0);
     }
 }
