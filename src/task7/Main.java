@@ -8,12 +8,12 @@ public class Main {
         boolean b = numbers.get(0) >= numbers.get(1);
         int max1 = b ? numbers.get(0) : numbers.get(1);
         int max2 = b ? numbers.get(1) : numbers.get(0);
-        return getSecondMaxNumberRec(numbers, 2, max1, max2).get(1);
+        return getSecondMaxNumberRec(numbers, 2, max1, max2);
     }
 
-    private static List<Integer> getSecondMaxNumberRec(List<Integer> numbers, int index, Integer max1, Integer max2) {
+    private static int getSecondMaxNumberRec(List<Integer> numbers, int index, Integer max1, Integer max2) {
         if (index >= numbers.size())
-            return List.of(max1, max2);
+            return max2;
         if (numbers.get(index) >= max1) {
             max2 = max1;
             max1 = numbers.get(index);
