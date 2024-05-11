@@ -15,7 +15,6 @@ public class Main {
         }
     }
 
-
     public static List met(File file) {
         List<File> dir = new ArrayList<>();
         List<File> listResult = new ArrayList<>();
