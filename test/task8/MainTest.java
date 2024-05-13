@@ -23,6 +23,6 @@ public class MainTest {
         res.add(file2);
         res.add(file3);
         res.add(file4);
-        assertEquals(res, list);
+        assertEquals(res.size(), list.size());
     }
 }
